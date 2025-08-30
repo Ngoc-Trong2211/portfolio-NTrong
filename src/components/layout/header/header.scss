@@ -1,0 +1,40 @@
+@use '../../../global/variable.scss' as *;
+
+.header{
+    background-color: $gray1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    gap: 40px;
+
+    &-home{
+        height: 40px;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    &-active{
+        text-decoration: none;
+        color: white;
+        text-decoration: none;
+        padding: 8px 11px;
+        color: black;
+        border-radius: 8px;
+        background-color: white;
+    }
+
+    &-btn{
+        text-decoration: none;
+        color: white;
+    }
+
+    &-about{
+        height: 40px;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
+}
