@@ -1,0 +1,37 @@
+h3{
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 38px;
+}
+
+.skill{
+
+    &-item{
+        padding: 20px;
+    }
+
+    &-card{
+        border-radius: 15px;
+        border: 1px solid rgb(118, 115, 115);
+        height: 150px;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px;
+        margin-top: 30px;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.25);
+
+        &:hover{
+            transform: scale(1.18);
+        }
+    }
+
+    &-name{
+        color: white;
+        margin-top: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+}
