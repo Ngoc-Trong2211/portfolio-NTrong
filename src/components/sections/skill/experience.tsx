@@ -6,7 +6,14 @@ import Marquee from 'react-fast-marquee';
 const Experience = () => {
     return(
         <div className='experience'>
-            <h3>EXPERIENCE WITH</h3>
+            <div className='experience-header'>
+                <h2 className='experience-title'>EXPERIENCE WITH</h2>
+                <div className='words'>
+                    {dataSkill.map(skill => (
+                        <h2 className='word'>{skill.toUpperCase()}</h2>
+                    ))}
+                </div>
+            </div>
             <div className='skill'>
                 <Marquee>
                     {dataSkill.map(skill => (
