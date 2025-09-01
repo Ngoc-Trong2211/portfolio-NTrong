@@ -2,6 +2,13 @@ import avatarImg from "assets/images/Avatar.png";
 import './introduction.scss'
 
 const Introduction = () => {
+    const handleScrollProject = () => {
+        const projectSection = document.getElementById("projects");
+        if (projectSection){
+            projectSection.scrollIntoView({behavior: "smooth"});
+        }
+    }
+
     return(
         <div className="introduction">
             <div className="introduction-image">
@@ -11,7 +18,10 @@ const Introduction = () => {
             <p className="introduction-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ab officiis accusamus possimus, dolore aliquid, libero amet sit, quos labore magni earum ipsa ut illo sed debitis veritatis aspernatur omnis.</p>
             <div className="introduction-btn">
                 <div className="introduction-btn-getintouch">
-                    <button className="introduction-btn-getintouch-none">My Project</button>
+                    <button
+                        className="introduction-btn-getintouch-none"
+                        onClick={handleScrollProject}    
+                    >My Project</button>
                 </div>
                 <div className="introduction-btn-downloadcv">
                     <button className="introduction-btn-getintouch-none">Download my CV</button>
