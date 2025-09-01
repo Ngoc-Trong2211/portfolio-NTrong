@@ -1,6 +1,7 @@
 import {Container} from "react-bootstrap";
-import Introduction from "@/components/sections/introduction/introduction";
-import Experience from "@/components/sections/skill/experience";
+import Introduction from "components/sections/introduction/introduction";
+import Experience from "components/sections/skill/experience";
+import Project from "components/sections/project/project";
 
 const HomePage = () => {
     return (
@@ -13,6 +14,11 @@ const HomePage = () => {
             <section>
                 <Container>
                     <Experience />
+                </Container>
+            </section>
+            <section>
+                <Container>
+                    <Project />
                 </Container>
             </section>
         </div>

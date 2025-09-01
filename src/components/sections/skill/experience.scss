@@ -1,7 +1,7 @@
 @use "sass:math";
 
 .experience-header{
-    margin-top: 30px;
+    margin-top: 35px;
     display: flex;
     justify-content: center;
     align-items:baseline;
@@ -95,7 +95,7 @@
     90%{
         transform: translateY(-900%);
     }
-    // 8
+    // 10
     95%{
         transform: translateY(-1002%);
     }
@@ -107,7 +107,7 @@
 .skill{
 
     &-item{
-        padding: 20px;
+        padding: 30px;
     }
 
     &-card{
@@ -119,12 +119,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-left: 50px;
-        margin-top: 20px;
+        margin-left: 30px;
+        margin-top: 25px;
         box-shadow: 0 5px 15px rgba(255, 255, 255, 0.25);
 
         &:hover{
-            transform: scale(1.18);
+            transform: scale(1.15);
         }
     }
 

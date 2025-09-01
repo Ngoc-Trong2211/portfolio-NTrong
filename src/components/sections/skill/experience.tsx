@@ -9,8 +9,8 @@ const Experience = () => {
             <div className='experience-header'>
                 <h2 className='experience-title'>EXPERIENCE WITH</h2>
                 <div className='words'>
-                    {dataSkill.map(skill => (
-                        <h2 className='word'>{skill.toUpperCase()}</h2>
+                    {dataSkill.map((skill, id)=> (
+                        <h2 className='word' key={id}>{skill.toUpperCase()}</h2>
                     ))}
                 </div>
             </div>
