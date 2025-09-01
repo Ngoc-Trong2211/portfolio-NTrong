@@ -16,20 +16,6 @@
         }
     }
 
-    &-panel {
-        position: absolute;
-        top: 0;
-        right: -100%;
-        width: 30%;
-        height: 100%;
-        background-color: white;
-        transition: right 5s ease;
-
-        &.active {
-            right: 100px;
-        }
-    }
-
     &-body{
         max-width: 100%;
         height: 300px;
@@ -163,5 +149,71 @@
                 z-index: 1;
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects-total {
+        width: 100% !important;
+    }
+
+    .projects-body {
+        height: auto;
+        border-radius: 20px;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .projects-image {
+        height: 150px;
+    }
+
+    .projects-btn {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        &-git {
+            width: 100%;
+        }
+        &-learn,
+        &-active {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .projects-body {
+        height: auto;
+        border-radius: 40px 10px 40px 10px;
+    }
+
+    .projects-image {
+        height: 180px;
+    }
+
+    .projects-btn {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .projects-btn-learn,
+    .projects-btn-active {
+        &::before {
+        display: none !important;
+        }
+
+        &:hover::before {
+        left: auto !important;
+        }
+
+        background-color: white !important;
+        color: black !important;
+        justify-content: center;
+        width: 100%;
     }
 }
