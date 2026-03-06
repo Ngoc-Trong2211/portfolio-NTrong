@@ -15,7 +15,9 @@ const Introduction = () => {
                 <img src={avatarImg} alt="" />
             </div>
             <h1>I do code and make content <span className="introduction-highlight">about it!</span></h1>
-            <p className="introduction-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ab officiis accusamus possimus, dolore aliquid, libero amet sit, quos labore magni earum ipsa ut illo sed debitis veritatis aspernatur omnis.</p>
+            <p className="introduction-text">
+                Welcome to my portfolio! I'm a Java and Web Developer who enjoys building modern web applications and learning new technologies. Here you can explore some of my projects and see the technologies I work with.
+            </p>
             <div className="introduction-btn">
                 <div className="introduction-btn-getintouch">
                     <button
@@ -24,7 +26,13 @@ const Introduction = () => {
                     >My Projects</button>
                 </div>
                 <div className="introduction-btn-downloadcv">
-                    <button className="introduction-btn-getintouch-none">Download my CV</button>
+                    <a
+                        href="/prj/prjOutline.docx"
+                        download
+                        className="introduction-btn-getintouch-none"
+                    >
+                        Download my Project Outline
+                    </a>
                 </div>
             </div>
         </div>

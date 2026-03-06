@@ -5,11 +5,12 @@ const dataSkill = [
     'Typescript',
     'React',
     'MySQL',
-    'PostgreSQL',
     'Git',
     'Bootstrap',
     'Docker',
     'Figma',
+    'Java',
+    'vitejs'
 ]
 
 export {

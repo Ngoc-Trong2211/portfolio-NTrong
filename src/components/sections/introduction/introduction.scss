@@ -40,7 +40,7 @@
             &-none{
                 background-color: transparent;
                 width: 100%;
-                padding: 16px 30px;
+                padding: 16px 20px;
                 border: none;
                 font-family: 'Poppins', sans-serif;
                 font-weight: 600;
@@ -48,6 +48,11 @@
                 color: white;
                 border: 1px solid white;
                 border-radius: 50px;
+                text-align: center;
+
+                text-decoration: none;
+                display: inline-block;
+                cursor: pointer;
             }
 
             &-none:hover{

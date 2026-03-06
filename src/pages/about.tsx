@@ -25,9 +25,12 @@ const About = () => {
       <section className="about-intro">
         <h2 className="about-intro__title">About Me</h2>
         <p className="about-intro__body">
-          I'm a passionate Java and Web Developer who enjoys building modern web applications.
+          I'm a passionate Java and Web Developer who enjoys building modern web applications. 
           I focus on clean code, user experience, and bringing ideas to life from backend to frontend.
-          When I'm not coding, I like to explore new technologies and contribute to open source.
+          I enjoy working with technologies such as Java, Spring Boot, and modern web frameworks to create efficient and scalable systems.
+          I am always eager to learn new technologies and continuously improve my development skills through practical projects.
+          I also have an English proficiency equivalent to TOEIC 550+, which allows me to read technical documentation and learn from international development resources. 
+          When I'm not coding, I enjoy exploring new technologies.
         </p>
       </section>
 
@@ -35,15 +38,15 @@ const About = () => {
         <h2 className="about-education__title">Education</h2>
         <div className="about-education__grid">
           <article className="about-edu-card">
-            <h3 className="about-edu-card__name">Your University / College</h3>
-            <p className="about-edu-card__detail">Degree · Major</p>
-            <p className="about-edu-card__period">Year – Year</p>
+            <h3 className="about-edu-card__name">Thuy Loi University</h3>
+            <p className="about-edu-card__detail">Technology information</p>
+            <p className="about-edu-card__period">2022 - present</p>
           </article>
-          <article className="about-edu-card">
+          {/* <article className="about-edu-card">
             <h3 className="about-edu-card__name">Another Institution</h3>
             <p className="about-edu-card__detail">Certificate or Course</p>
             <p className="about-edu-card__period">Year</p>
-          </article>
+          </article> */}
         </div>
       </section>
 

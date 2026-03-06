@@ -49,22 +49,26 @@ const DetailProject = (props: IProps) => {
 
                     <h3>Tech Stack</h3>
 
-                    <h4>Frontend</h4>
-                    <div style={{marginBottom: 12}}>
-                        {project.techStack.frontend.map((t) => (
-                            <Tag color="blue" key={t}>{t}</Tag>
-                        ))}
-                    </div>
+                    {project.techStack.frontend.length > 0 && (
+                        <>
+                            <h4>Frontend</h4>
+                            <div style={{marginBottom: 12, marginTop: 5}}>
+                                {project.techStack.frontend.map((t) => (
+                                    <Tag color="blue" key={t}>{t}</Tag>
+                                ))}
+                            </div>
+                        </>
+                    )}
 
                     <h4>Backend</h4>
                     <div style={{marginBottom: 12}}>
                         {project.techStack.backend.map((t) => (
-                            <Tag color="volcano" key={t}>{t}</Tag>
+                            <Tag style={{marginTop: 5}} color="volcano" key={t}>{t}</Tag>
                         ))}
                     </div>
 
                     <h4>Supporting Tools</h4>
-                    <div>
+                    <div style={{marginBottom: 12, marginTop: 5}}>
                         {project.techStack.tools.map((t) => (
                             <Tag key={t}>{t}</Tag>
                         ))}
@@ -83,22 +87,32 @@ const DetailProject = (props: IProps) => {
 
                     <h3>Source Code</h3>
 
-                    <div style={{display: "flex", gap: "10px", flexWrap: "wrap"}}>
-                        <Button
-                            type="primary"
-                            href={project.sourceCode.backendUrl}
-                            target="_blank"
-                        >
-                            Backend GitHub
-                        </Button>
+                    <div
+                        style={{
+                            display: "flex",
+                            gap: "12px",
+                            flexWrap: "wrap",
+                            marginTop: "10px"
+                        }}
+                    >
+                        {project.sourceCode.backendUrl && (
+                            <Button
+                                type="primary"
+                                href={project.sourceCode.backendUrl}
+                                target="_blank"
+                            >
+                                Backend GitHub
+                            </Button>
+                        )}
 
-                        <Button
-                            type="default"
-                            href={project.sourceCode.frontendUrl}
-                            target="_blank"
-                        >
-                            Frontend GitHub
-                        </Button>
+                        {project.sourceCode.frontendUrl && (
+                            <Button
+                                href={project.sourceCode.frontendUrl}
+                                target="_blank"
+                            >
+                                Frontend GitHub
+                            </Button>
+                        )}
                     </div>
                 </>
             )}
