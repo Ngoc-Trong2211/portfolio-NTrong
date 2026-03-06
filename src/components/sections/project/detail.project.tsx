@@ -1,4 +1,5 @@
 import { Drawer, Divider, Tag, Button } from "antd"
+import { useLanguage } from "../../../context/LanguageContext";
 
 export interface IProjectDetail {
     id: string;
@@ -26,10 +27,11 @@ interface IProps{
 const DetailProject = (props: IProps) => {
 
     const {isOpenDrawer, setIsOpDrawer, setIsActive, project} = props;
+    const { lang } = useLanguage();
 
     return(
         <Drawer
-            title={project?.title ?? "Project Details"}
+            title={project?.title ?? (lang === "en" ? "Project Details" : "Chi tiết dự án")}
             onClose={() => {
                 setIsOpDrawer(false);
                 setIsActive(false)
@@ -40,18 +42,18 @@ const DetailProject = (props: IProps) => {
         >   
             {!project ? null : (
                 <>
-                    <h3>Project Overview</h3>
+                    <h3>{lang === "en" ? "Project Overview" : "Tổng quan dự án"}</h3>
                     <p style={{lineHeight: "1.6"}}>
                         {project.overview}
                     </p>
 
                     <Divider />
 
-                    <h3>Tech Stack</h3>
+                    <h3>{lang === "en" ? "Tech Stack" : "Công nghệ sử dụng"}</h3>
 
                     {project.techStack.frontend.length > 0 && (
                         <>
-                            <h4>Frontend</h4>
+                            <h4>{lang === "en" ? "Frontend" : "Frontend"}</h4>
                             <div style={{marginBottom: 12, marginTop: 5}}>
                                 {project.techStack.frontend.map((t) => (
                                     <Tag color="blue" key={t}>{t}</Tag>
@@ -67,7 +69,7 @@ const DetailProject = (props: IProps) => {
                         ))}
                     </div>
 
-                    <h4>Supporting Tools</h4>
+                    <h4>{lang === "en" ? "Supporting Tools" : "Công cụ hỗ trợ"}</h4>
                     <div style={{marginBottom: 12, marginTop: 5}}>
                         {project.techStack.tools.map((t) => (
                             <Tag key={t}>{t}</Tag>
@@ -76,7 +78,7 @@ const DetailProject = (props: IProps) => {
 
                     <Divider />
 
-                    <h3>Key Features</h3>
+                    <h3>{lang === "en" ? "Key Features" : "Tính năng chính"}</h3>
                     <ul style={{paddingLeft: 18, lineHeight: "1.8"}}>
                         {project.keyFeatures.map((f) => (
                             <li key={f}>{f}</li>
@@ -85,7 +87,7 @@ const DetailProject = (props: IProps) => {
 
                     <Divider />
 
-                    <h3>Source Code</h3>
+                    <h3>{lang === "en" ? "Source Code" : "Mã nguồn"}</h3>
 
                     <div
                         style={{
@@ -101,7 +103,7 @@ const DetailProject = (props: IProps) => {
                                 href={project.sourceCode.backendUrl}
                                 target="_blank"
                             >
-                                Backend GitHub
+                                {lang === "en" ? "Backend GitHub" : "GitHub Backend"}
                             </Button>
                         )}
 
@@ -110,7 +112,7 @@ const DetailProject = (props: IProps) => {
                                 href={project.sourceCode.frontendUrl}
                                 target="_blank"
                             >
-                                Frontend GitHub
+                                {lang === "en" ? "Frontend GitHub" : "GitHub Frontend"}
                             </Button>
                         )}
                     </div>

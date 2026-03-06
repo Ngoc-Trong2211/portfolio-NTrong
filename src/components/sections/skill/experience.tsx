@@ -2,12 +2,17 @@ import { dataSkill } from '@/helpers/data';
 import './experience.scss'
 import { skillsImage } from '@/helpers/skill.image';
 import Marquee from 'react-fast-marquee';
+import { useLanguage } from '../../../context/LanguageContext';
 
 const Experience = () => {
+    const { lang } = useLanguage();
+
     return(
         <div className='experience'>
             <div className='experience-header'>
-                <h2 className='experience-title'>EXPERIENCE WITH</h2>
+                <h2 className='experience-title'>
+                    {lang === "en" ? "EXPERIENCE WITH" : "KINH NGHIỆM VỚI"}
+                </h2>
             </div>
             <div className='skill'>
                 <Marquee>

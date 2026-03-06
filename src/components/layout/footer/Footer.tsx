@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import './Footer.scss';
+import { useLanguage } from '../../../context/LanguageContext';
 
 const Footer = () => {
+  const { lang } = useLanguage();
+
   const quickLinks = [
-    { label: 'Home', to: '/' },
-    { label: 'About', to: '/about' },
-    { label: 'Projects', to: '/#projects' },
+    { labelEn: 'Home', labelVi: 'Trang chủ', to: '/' },
+    { labelEn: 'About', labelVi: 'Giới thiệu', to: '/about' },
+    { labelEn: 'Projects', labelVi: 'Dự án', to: '/#projects' },
   ];
 
   const techStack = ['Java', 'Spring Boot', 'SQL'];
@@ -56,19 +59,25 @@ const Footer = () => {
         <Container>
           <div className="footer__grid">
             <div className="footer__col footer__about">
-              <h3 className="footer__heading">About Me</h3>
+              <h3 className="footer__heading">
+                {lang === 'en' ? 'About Me' : 'Về bản thân tôi'}
+              </h3>
               <p className="footer__text">
-                I'm a passionate Java and Web Developer who enjoys building modern web applications.
+                {lang === 'en'
+                  ? "I'm a passionate Java and Web Developer who enjoys building modern web applications."
+                  : 'Tôi là một Java & Web Developer đam mê xây dựng các ứng dụng web hiện đại.'}
               </p>
             </div>
 
             <div className="footer__col footer__links">
-              <h3 className="footer__heading">Quick Links</h3>
+              <h3 className="footer__heading">
+                {lang === 'en' ? 'Quick Links' : 'Liên kết nhanh'}
+              </h3>
               <ul className="footer__list">
-                {quickLinks.map(({ label, to }) => (
-                  <li key={label} className="footer__list-item">
+                {quickLinks.map(({ labelEn, labelVi, to }) => (
+                  <li key={labelEn} className="footer__list-item">
                     <Link to={to} className="footer__link">
-                      {label}
+                      {lang === 'en' ? labelEn : labelVi}
                     </Link>
                   </li>
                 ))}
@@ -76,7 +85,9 @@ const Footer = () => {
             </div>
 
             <div className="footer__col footer__tech">
-              <h3 className="footer__heading">Tech Stack</h3>
+              <h3 className="footer__heading">
+                {lang === 'en' ? 'Tech Stack' : 'Công nghệ'}
+              </h3>
               <ul className="footer__list">
                 {techStack.map((tech) => (
                   <li key={tech} className="footer__list-item">
@@ -87,7 +98,9 @@ const Footer = () => {
             </div>
 
             <div className="footer__col footer__social">
-              <h3 className="footer__heading">Connect</h3>
+              <h3 className="footer__heading">
+                {lang === 'en' ? 'Connect' : 'Kết nối'}
+              </h3>
               <ul className="footer__social-list">
                 {socialLinks.map(({ label, href, icon }) => (
                   <li key={label} className="footer__social-item">
@@ -111,8 +124,16 @@ const Footer = () => {
 
       <div className="footer__copyright">
         <p className="footer__copyright-text">
-          Copyright © {new Date().getFullYear()} Pham Vu Ngoc Trong. Made with{' '}
-          <span className="footer__copyright-heart">♥</span> in VietNam
+          {lang === 'en'
+            ? <>
+                Copyright © {new Date().getFullYear()} Pham Vu Ngoc Trong.
+                {' '}Made with <span className="footer__copyright-heart">♥</span> in VietNam
+              </>
+            : <>
+                Bản quyền © {new Date().getFullYear()} Phạm Vũ Ngọc Trọng.
+                {' '}Được tạo nên với <span className="footer__copyright-heart">♥</span> tại Việt Nam
+              </>
+          }
         </p>
       </div>
     </footer>

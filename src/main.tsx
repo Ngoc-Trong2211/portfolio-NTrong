@@ -7,6 +7,7 @@ import {
 import HomePage from './pages/home.tsx';
 import About from './pages/about.tsx';
 import ErrorPage from './pages/error.tsx';
+import { LanguageProvider } from './context/LanguageContext.tsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <RouterProvider router={router}/>
+      <LanguageProvider>
+        <RouterProvider router={router}/>
+      </LanguageProvider>
   </StrictMode>,
 )

@@ -1,7 +1,9 @@
 import './about.scss';
 import avatarImg from 'assets/images/Avatar.png';
+import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
+  const { lang } = useLanguage();
   const contactEmail = 'trongpvn2211@gmail.com';
   const socialLinks = [
     { label: 'GitHub', href: 'https://github.com', icon: 'github' },
@@ -16,31 +18,44 @@ const About = () => {
           <img src={avatarImg} alt="Pham Vu Ngoc Trong" className="about-hero__avatar" />
         </div>
         <div className="about-hero__text">
-          <p className="about-hero__greeting">Hello,</p>
-          <h1 className="about-hero__name">I'm Pham Vu Ngoc Trong</h1>
-          <p className="about-hero__tagline">Java & Web Developer · Building modern applications</p>
+          <p className="about-hero__greeting">
+            {lang === 'en' ? 'Hello,' : 'Xin chào,'}
+          </p>
+          <h1 className="about-hero__name">
+            {lang === 'en' ? "I'm Pham Vu Ngoc Trong" : 'Tôi là Phạm Vũ Ngọc Trọng'}
+          </h1>
+          <p className="about-hero__tagline">
+            {lang === 'en'
+              ? 'Java & Web Developer · Building modern applications'
+              : 'Java & Web Developer · Xây dựng các ứng dụng hiện đại'}
+          </p>
         </div>
       </section>
 
       <section className="about-intro">
-        <h2 className="about-intro__title">About Me</h2>
+        <h2 className="about-intro__title">
+          {lang === 'en' ? 'About Me' : 'Về bản thân tôi'}
+        </h2>
         <p className="about-intro__body">
-          I'm a passionate Java and Web Developer who enjoys building modern web applications. 
-          I focus on clean code, user experience, and bringing ideas to life from backend to frontend.
-          I enjoy working with technologies such as Java, Spring Boot, and modern web frameworks to create efficient and scalable systems.
-          I am always eager to learn new technologies and continuously improve my development skills through practical projects.
-          I also have an English proficiency equivalent to TOEIC 550+, which allows me to read technical documentation and learn from international development resources. 
-          When I'm not coding, I enjoy exploring new technologies.
+          {lang === 'en'
+            ? "I'm a passionate Java and Web Developer who enjoys building modern web applications. I focus on clean code, user experience, and bringing ideas to life from backend to frontend. I enjoy working with technologies such as Java, Spring Boot, and modern web frameworks to create efficient and scalable systems. I am always eager to learn new technologies and continuously improve my development skills through practical projects. I also have an English proficiency equivalent to TOEIC 550+, which allows me to read technical documentation and learn from international development resources. When I'm not coding, I enjoy exploring new technologies."
+            : 'Tôi là một Java & Web Developer đam mê xây dựng các ứng dụng web hiện đại. Tôi chú trọng vào clean code, trải nghiệm người dùng và biến ý tưởng thành sản phẩm hoàn chỉnh từ backend đến frontend. Tôi thích làm việc với các công nghệ như Java, Spring Boot và các framework web hiện đại để tạo ra hệ thống hiệu quả, dễ mở rộng. Tôi luôn sẵn sàng học hỏi công nghệ mới và cải thiện kỹ năng thông qua các dự án thực tế. Trình độ tiếng Anh của tôi tương đương TOEIC 550+, đủ để đọc tài liệu kỹ thuật và học hỏi từ nguồn quốc tế. Khi không viết code, tôi thường tìm hiểu thêm về những công nghệ mới.'}
         </p>
       </section>
 
       <section className="about-education">
-        <h2 className="about-education__title">Education</h2>
+        <h2 className="about-education__title">
+          {lang === 'en' ? 'Education' : 'Học vấn'}
+        </h2>
         <div className="about-education__grid">
           <article className="about-edu-card">
             <h3 className="about-edu-card__name">Thuy Loi University</h3>
-            <p className="about-edu-card__detail">Technology information</p>
-            <p className="about-edu-card__period">2022 - present</p>
+            <p className="about-edu-card__detail">
+              {lang === 'en' ? 'Information Technology' : 'Công nghệ thông tin'}
+            </p>
+            <p className="about-edu-card__period">
+              {lang === 'en' ? '2022 - present' : '2022 - nay'}
+            </p>
           </article>
           {/* <article className="about-edu-card">
             <h3 className="about-edu-card__name">Another Institution</h3>
@@ -51,7 +66,9 @@ const About = () => {
       </section>
 
       <section className="about-contact">
-        <h2 className="about-contact__title">Find me on</h2>
+        <h2 className="about-contact__title">
+          {lang === 'en' ? 'Find me on' : 'Kết nối với tôi tại'}
+        </h2>
         <div className="about-contact__email">
           <span className="about-contact__icon about-contact__icon--email" aria-hidden>
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
