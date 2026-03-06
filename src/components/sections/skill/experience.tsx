@@ -8,19 +8,14 @@ const Experience = () => {
         <div className='experience'>
             <div className='experience-header'>
                 <h2 className='experience-title'>EXPERIENCE WITH</h2>
-                <div className='words'>
-                    {dataSkill.map((skill, id)=> (
-                        <h2 className='word' key={id}>{skill.toUpperCase()}</h2>
-                    ))}
-                </div>
             </div>
             <div className='skill'>
                 <Marquee>
-                    {dataSkill.map(skill => (
+                    {dataSkill.map((skill, id) => (
                         <div className='skill-item'>
                             <div className='skill-card'>
                                 <img src={skillsImage(skill)} alt="skill" width={40} height={40}/>
-                                <p className="skill-name">{skill}</p>
+                                <p className="skill-name" key={id}>{skill}</p>
                             </div>
                         </div>
                     ))}

@@ -1,10 +1,11 @@
 .projects{
-    margin-top: 30px;
+    margin: 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 35px;
     overflow: hidden;
+    margin-bottom: 80px;
 
     &-total{
         position: relative;
@@ -16,21 +17,22 @@
         }
     }
 
-    &-body{
-        max-width: 100%;
-        height: 300px;
+    &-list{
+        width: min(1100px, 100%);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        padding: 0 12px;
+    }
+
+    &-card{
+        height: 350px;
         display: flex;
         flex-direction: column;
         gap: 10px;
         border-radius: 80px 10px 80px 10px;
         background-color: #222222;
         overflow: hidden;
-        transform: translateX(0px);
-        transition: transform 0.5s ease-out;
-
-        &.active{
-            transform: translateX(-100px);
-        }
     }
 
     &-title{
@@ -40,7 +42,7 @@
 
     &-image{
         width: 100%;
-        height: 200px;
+        height: 250px;
         overflow: hidden;
 
         img{
@@ -153,11 +155,11 @@
 }
 
 @media screen and (max-width: 768px) {
-    .projects-total {
-        width: 100% !important;
+    .projects-list{
+        grid-template-columns: 1fr;
     }
 
-    .projects-body {
+    .projects-card {
         height: auto;
         border-radius: 20px;
         transform: none !important;
@@ -186,7 +188,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
-    .projects-body {
+    .projects-card {
         height: auto;
         border-radius: 40px 10px 40px 10px;
     }

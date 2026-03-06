@@ -1,194 +1,297 @@
-.container{
-    margin-top: 35px;
-    padding: 0px 116px;
-    font-family: 'Poppins', sans-serif;
+// About page – improved layout, typography, and sections
 
-    &-header{
-        display: flex;
-        justify-content: space-between;
-    }
+$about-gradient: linear-gradient(135deg, #ff825b 10%, #0e23db);
+$about-text: #e8e8e8;
+$about-muted: #a0a0a0;
+$about-card-bg: rgba(255, 255, 255, 0.04);
+$about-card-border: rgba(255, 255, 255, 0.12);
+$about-max-width: 900px;
+$about-section-gap: 3.5rem;
 
-    &-education{
-        display: flex;
-        margin-top: 30px;
-        gap: 35px;
-
-        & h3{
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            background-image: linear-gradient(50deg, #FF825B 10%, #0E23DB);
-            font-weight: 700;
-        }
-
-        & .education{
-            border: 1px solid rgb(119, 118, 118);
-            display: flex;
-            flex-direction: column;
-            color: white;
-            padding: 10px 0px 15px 0px;
-            width: 20%;
-            border-radius: 10px;
-            box-shadow: 0px 5px 20px 5px rgba(255, 255, 255, 0.25);
-
-            & h4{
-                color: transparent;
-                background-clip: text;
-                -webkit-background-clip: text;
-                background-image: linear-gradient(50deg, #FF825B 10%, #0E23DB);
-                font-weight: 700;
-                font-size: 20px;
-                text-align: center;
-            }
-
-            & p{
-                margin-left: 28px;
-            }
-        }
-    }
-
-    &-contact{
-        display: flex;
-        flex-direction: column;
-        color: white;
-        margin-top: 30px;
-
-        & h3{
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            background-image: linear-gradient(50deg, #FF825B 10%, #0E23DB);
-            font-weight: 700;
-        }
-    }
+.about-page {
+  font-family: 'Poppins', sans-serif;
+  color: $about-text;
+  max-width: $about-max-width;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
 }
 
-.intro{
-    color: white;
-
-    & h2{
-        font-size: 50px;
-    }
-
-    & h3{
-        font-size: 20px;
-    }
-
-    & p{
-        margin-top: 20px;
-        width: 90%;
-    }
+// Hero: avatar + name + tagline
+.about-hero {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: $about-section-gap;
 }
 
-.image{
-    background-image: linear-gradient(50deg, #FF825B 10%, #0E23DB);
-    width: 212px;
-    height: 212px;
-    border-radius: 50%;
+.about-hero__avatar-wrap {
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  padding: 4px;
+  background: $about-gradient;
+  box-shadow: 0 8px 32px rgba(255, 130, 91, 0.25);
 }
 
-@media screen and (max-width: 768px){
-    .container {
-        padding: 0px 20px;
-        margin-top: 20px;
-
-        &-header{
-            flex-direction: column-reverse;
-        }
-
-        &-education {
-            flex-direction: column;
-            gap: 20px;
-
-            & .education {
-                width: 80%;
-            }
-        }
-
-        &-contact {
-        margin-top: 20px;
-
-        & h3 {
-            font-size: 18px;
-        }
-        }
-    }
-
-    .intro {
-        & h2 {
-        font-size: 28px;
-        text-align: center;
-        }
-
-        & h3 {
-        font-size: 16px;
-        text-align: center;
-        }
-
-        & p {
-        width: 100%;
-        font-size: 14px;
-        text-align: justify;
-        }
-    }
-
-    .image {
-        width: 150px;
-        height: 150px;
-        margin: 0 auto;
-        object-fit: cover;
-        overflow: hidden;
-        margin-bottom: 10px;
-
-        & img{
-            width: 150px;
-            height: 150px;
-        }
-    }
+.about-hero__avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .container {
-        padding: 0px 40px;
+.about-hero__text {
+  flex: 1;
+  min-width: 0;
+}
 
-        &-education {
-            flex-wrap: wrap;
-            gap: 25px;
+.about-hero__greeting {
+  font-size: 1.125rem;
+  color: $about-muted;
+  margin-bottom: 0.25rem;
+}
 
-            & .education {
-                width: 35%;
-            }
-        }
+.about-hero__name {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: start;
+}
 
-        &-contact {
-            & h3 {
-                font-size: 20px;
-            }
-        }
+.about-hero__tagline {
+  font-size: 1rem;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: $about-gradient;
+  font-weight: 500;
+}
+
+// Intro block
+.about-intro {
+  margin-bottom: $about-section-gap;
+}
+
+.about-intro__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: $about-gradient;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.about-intro__body {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: $about-text;
+  max-width: 56ch;
+}
+
+// Education
+.about-education {
+  margin-bottom: $about-section-gap;
+}
+
+.about-education__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: $about-gradient;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.about-education__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.about-edu-card {
+  background: $about-card-bg;
+  border: 1px solid $about-card-border;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: rgba(255, 130, 91, 0.35);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.about-edu-card__name {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: $about-gradient;
+  margin-bottom: 0.5rem;
+}
+
+.about-edu-card__detail,
+.about-edu-card__period {
+  font-size: 0.9375rem;
+  color: $about-muted;
+  margin: 0;
+}
+
+.about-edu-card__period {
+  margin-top: 0.25rem;
+}
+
+// Contact
+.about-contact {
+  padding-top: 0.5rem;
+}
+
+.about-contact__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: $about-gradient;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.about-contact__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.about-contact__icon {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--email {
+    color: $about-muted;
+  }
+}
+
+.about-contact__link {
+  font-size: 1rem;
+  color: $about-text;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.about-contact__social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.about-contact__social-item {
+  margin: 0;
+}
+
+.about-contact__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: $about-card-bg;
+  border: 1px solid $about-card-border;
+  color: $about-muted;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  &:hover {
+    color: #fff;
+    border-color: rgba(255, 130, 91, 0.4);
+    transform: translateY(-2px);
+  }
+}
+
+// Responsive
+@media (max-width: 640px) {
+  .about-page {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .about-hero__avatar-wrap {
+    width: 140px;
+    height: 140px;
+  }
+
+  .about-hero__name {
+    font-size: 1.5rem;
+  }
+
+  .about-hero__tagline {
+    font-size: 0.9375rem;
+  }
+
+  .about-intro__body {
+    font-size: 0.9375rem;
+  }
+
+  .about-education__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-contact__social-link {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 20px;
+      height: 20px;
     }
+  }
+}
 
-    .intro {
-        & h2 {
-            font-size: 36px;
-        }
+@media (min-width: 641px) and (max-width: 1024px) {
+  .about-hero__avatar-wrap {
+    width: 160px;
+    height: 160px;
+  }
 
-        & h3 {
-            font-size: 18px;
-        }
-
-        & p {
-            width: 100%;
-            font-size: 15px;
-        }
-    }
-
-    .image {
-        width: 180px;
-        height: 180px;
-
-        & img{
-            width: 180px;
-            height: 180px;
-        }
-    }
+  .about-education__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

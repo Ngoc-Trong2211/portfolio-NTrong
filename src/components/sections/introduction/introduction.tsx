@@ -21,7 +21,7 @@ const Introduction = () => {
                     <button
                         className="introduction-btn-getintouch-none"
                         onClick={handleScrollProject}    
-                    >My Project</button>
+                    >My Projects</button>
                 </div>
                 <div className="introduction-btn-downloadcv">
                     <button className="introduction-btn-getintouch-none">Download my CV</button>
