@@ -3,6 +3,7 @@ import './project.scss'
 import DetailProject from './detail.project';
 import type { IProjectDetail } from './detail.project';
 import { useLanguage } from '../../../context/LanguageContext';
+import arrow from "../../../assets/images/arrow.png";
 
 const Project = () => {
     const { lang } = useLanguage();
@@ -123,7 +124,8 @@ const Project = () => {
                                         }}
                                     >
                                         <img
-                                            srcSet="./src/assets/images/arrow.png 2x"
+                                            src={arrow}
+                                            srcSet={`${arrow} 2x`}
                                             alt="arrow"
                                             className="projects-btn-learn-img"
                                         />
