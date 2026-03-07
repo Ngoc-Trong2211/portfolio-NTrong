@@ -8,7 +8,7 @@ const Footer = () => {
 
   const quickLinks = [
     { labelEn: 'Home', labelVi: 'Trang chủ', to: '/' },
-    { labelEn: 'About', labelVi: 'Giới thiệu', to: '/about' },
+    { labelEn: 'About me', labelVi: 'Giới thiệu', to: '/about' },
     { labelEn: 'Projects', labelVi: 'Dự án', to: '/#projects' },
   ];
 
