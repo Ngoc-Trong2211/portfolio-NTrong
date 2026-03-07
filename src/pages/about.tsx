@@ -1,5 +1,5 @@
 import './about.scss';
-import avatarImg from 'assets/images/Avatar.png';
+import avatarImg from "assets/images/Myavt.jpg";
 import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
@@ -15,7 +15,7 @@ const About = () => {
     <div className="about-page">
       <section className="about-hero">
         <div className="about-hero__avatar-wrap">
-          <img src={avatarImg} alt="Pham Vu Ngoc Trong" className="about-hero__avatar" />
+          <img src={avatarImg} alt="avatar" className="about-hero__avatar" />
         </div>
         <div className="about-hero__text">
           <p className="about-hero__greeting">

@@ -1,4 +1,4 @@
-import avatarImg from "assets/images/Avatar.png";
+import avatarImg from "assets/images/Myavt.jpg";
 import './introduction.scss'
 import { useLanguage } from "../../../context/LanguageContext";
 
@@ -14,7 +14,7 @@ const Introduction = () => {
     return(
         <div className="introduction">
             <div className="introduction-image">
-                <img src={avatarImg} alt="" />
+                <img src={avatarImg} alt="avatar" />
             </div>
             <h1>
                 {lang === "en"
