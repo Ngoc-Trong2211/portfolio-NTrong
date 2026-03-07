@@ -54,9 +54,9 @@ const DetailProject = (props: IProps) => {
                     {project.techStack.frontend.length > 0 && (
                         <>
                             <h4>{lang === "en" ? "Frontend" : "Frontend"}</h4>
-                            <div style={{marginBottom: 12, marginTop: 5}}>
+                            <div style={{marginBottom: 12}}>
                                 {project.techStack.frontend.map((t) => (
-                                    <Tag color="blue" key={t}>{t}</Tag>
+                                    <Tag style={{marginTop: 5}} color="blue" key={t}>{t}</Tag>
                                 ))}
                             </div>
                         </>

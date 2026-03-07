@@ -6,7 +6,7 @@ const About = () => {
   const { lang } = useLanguage();
   const contactEmail = 'trongpvn2211@gmail.com';
   const socialLinks = [
-    { label: 'GitHub', href: 'https://github.com', icon: 'github' },
+    { label: 'GitHub', href: 'https://github.com/Ngoc-Trong2211', icon: 'github' },
     { label: 'Facebook', href: 'https://facebook.com', icon: 'facebook' },
     { label: 'Instagram', href: 'https://instagram.com', icon: 'instagram' },
   ];
