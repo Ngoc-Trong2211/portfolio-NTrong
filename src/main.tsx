@@ -20,12 +20,14 @@ const router = createBrowserRouter([
         element: <HomePage/>
       },
       {
-        path: "/about",
+        path: "about",
         element: <About/>
       }
     ]
   },
-])
+], {
+    basename: "/portfolio-NTrong/"
+  })
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
