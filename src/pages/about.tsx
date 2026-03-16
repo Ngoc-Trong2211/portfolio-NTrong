@@ -7,8 +7,8 @@ const About = () => {
   const contactEmail = 'trongpvn2211@gmail.com';
   const socialLinks = [
     { label: 'GitHub', href: 'https://github.com/Ngoc-Trong2211', icon: 'github' },
-    { label: 'Facebook', href: 'https://facebook.com', icon: 'facebook' },
-    { label: 'Instagram', href: 'https://instagram.com', icon: 'instagram' },
+    { label: 'Facebook', href: 'https://www.facebook.com/share/1HWT9qg6m8/?mibextid=wwXIfr', icon: 'facebook' },
+    { label: 'Instagram', href: 'https://www.instagram.com/gnortcogn.87664', icon: 'instagram' },
   ];
 
   return (
@@ -54,7 +54,7 @@ const About = () => {
               {lang === 'en' ? 'Information Technology' : 'Công nghệ thông tin'}
             </p>
             <p className="about-edu-card__period">
-              {lang === 'en' ? '2022 - present' : '2022 - nay'}
+              {lang === 'en' ? '2023 - present' : '2023 - nay'}
             </p>
           </article>
           {/* <article className="about-edu-card">
