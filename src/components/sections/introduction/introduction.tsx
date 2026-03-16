@@ -44,7 +44,7 @@ const Introduction = () => {
                         download
                         className="introduction-btn-getintouch-none"
                     >
-                        {lang === "en" ? "Download my Project Outline" : "Tải mô tả dự án của tôi"}
+                        {lang === "en" ? "Download my CV" : "Tải CV của tôi"}
                     </a>
                 </div>
             </div>
