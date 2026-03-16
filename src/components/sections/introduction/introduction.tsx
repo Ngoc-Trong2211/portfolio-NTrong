@@ -40,7 +40,7 @@ const Introduction = () => {
                 </div>
                 <div className="introduction-btn-downloadcv">
                     <a
-                        href="/prj/Pham-Vu-Ngoc-Trong.pdf"
+                        href="/prj/Pham-Vu-Ngoc-Trong.docx"
                         download
                         className="introduction-btn-getintouch-none"
                     >
